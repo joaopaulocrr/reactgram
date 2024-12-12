@@ -17,7 +17,7 @@ const userCreateValidation = () => {
         body("confirmPassword")
             .isString().withMessage("A confirmação de senha é obrigatório.")
             .custom((value, {req}) => {
-                if(value != req.body.password) {
+                if(value !== req.body.password) {
                     throw new Error("As senhas não são iguais.")
                     
                 }
@@ -27,5 +27,5 @@ const userCreateValidation = () => {
 }
 
 module.exports = {
-    userCreateValidation
+    userCreateValidation,
 }

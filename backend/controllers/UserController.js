@@ -14,7 +14,7 @@ const generateToken = (id) => {
 
 // Register user and sign in 
 const register = async (req, res) => {
-    res.send("Registro")
+    res.send({"name": "João"})
 }
 
 module.exports = {
